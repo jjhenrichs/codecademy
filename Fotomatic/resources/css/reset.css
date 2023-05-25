@@ -61,20 +61,61 @@ nav ul li img {
   width: 1rem;
 }
 
-.button {
+/* .button {
   background-color: #9dc20b;
   border-radius: 4px;
   padding: 8px;
   color: white;
   visibility: hidden;
-}
+} */
 
 /* Main */
+
+/* Sign-up Section */
+.sign-up {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #fff;
+  text-align: center;
+  background-image: url("../images/banner-landingpage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  border: 1px solid #979797;
+  background-color: #9dc20a;
+  margin: 170px 0 170px 100px;
+  width: 500px;
+}
+
+.header h2 {
+  margin-top: 32px;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.email {
+  margin: 12px auto;
+  line-height: 1.4;
+  font-size: 20px;
+  width: 375px;
+}
+
+.button {
+  margin: 26px auto;
+  margin-bottom: 56px;
+  background-color: #4a4a4a;
+  border-radius: 4px;
+  padding: 16px;
+  width: 308px;
+}
 
 /* Quotes Section */
 .quotes {
   font-size: 30px;
-  border: 1px solid red;
   padding: 80px 30px;
   display: flex;
   justify-content: center;
