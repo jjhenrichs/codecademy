@@ -149,6 +149,38 @@ nav ul li img {
   margin: 20px;
 }
 
+/* Filters */
+
+.filters {
+  background-color: #4a4a4a;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-captions {
+  padding: 64px;
+  line-height: 1.4;
+}
+
+.filter-captions h1 {
+  font-size: 36px;
+}
+
+.filter-captions p {
+  font-size: 16px;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.images img {
+  width: 100%;
+  margin: 80px 0 64px;
+}
+
 /* Quotes Section */
 .quotes {
   font-size: 30px;
