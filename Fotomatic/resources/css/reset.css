@@ -140,6 +140,7 @@ nav ul li a {
   font-size: 2.5rem;
   font-style: normal;
 }
+
 .banner h1 {
   font-family: "Rubik", sans-serif;
   font-size: 3rem;
@@ -173,6 +174,17 @@ nav ul li a {
   .signup-section {
     height: 28rem;
   }
+
+  .banner {
+    background: transparent;
+    border: transparent;
+    justify-self: center;
+    margin: 0 auto;
+  }
+
+  .email {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -180,6 +192,13 @@ nav ul li a {
     height: 18rem;
     align-items: center;
     justify-content: center;
+  }
+
+  .banner h2 {
+    font-size: 1.75rem;
+  }
+  .banner h1 {
+    font-size: 2rem;
   }
 }
 
