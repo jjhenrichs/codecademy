@@ -1,7 +1,6 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-size: 16px;
   font-family: Roboto;
   color: #4a4a4a;
 }
@@ -110,6 +109,33 @@ nav ul li a {
 
 /* Sign-up Section */
 
+.signup-section {
+  height: 43.5rem;
+  background-image: url(../images/banner-landingpage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid black;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 770px) {
+  .signup-section {
+    height: 28rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .signup-section {
+    height: 18rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* Features Section*/
 
 /* Filter Section */
@@ -135,7 +161,7 @@ nav ul li a {
   padding: 8rem 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .quote p {
     font-size: 27px;
     text-align: left;
