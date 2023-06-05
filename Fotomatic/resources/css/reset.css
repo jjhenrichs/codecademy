@@ -16,6 +16,9 @@ html {
   grid-template-columns: 1fr 8fr;
   align-items: center;
   height: 85px;
+  position: fixed;
+  z-index: 100;
+  background-color: #fff;
 }
 
 /* Fotomatic Logo */
@@ -81,6 +84,10 @@ nav ul li a {
 
   .mobile {
     display: block;
+    position: fixed;
+    background: #fff;
+    z-index: 100;
+    width: 100%;
   }
 
   .logo {
