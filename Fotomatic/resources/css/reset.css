@@ -1,164 +1,463 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 * {
   margin: 0;
-  font-family: "Roboto";
+  box-sizing: border-box;
+  font-family: Roboto;
+  color: #4a4a4a;
 }
 
-header {
-  height: 85px;
+html {
+  font-size: 16px;
 }
 
-footer {
-  height: 62px;
-  background-color: #9b9b9b;
-  color: white;
-  font-size: 0.75rem;
+/* Header */
+
+.desktop {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 8fr;
   align-items: center;
+  height: 85px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
 }
 
-.copyright {
+/* Fotomatic Logo */
+.logo {
+  font-size: 1.5em;
+  text-decoration: none;
+  margin: 0 2rem;
+}
+
+/* Instagram Icon */
+.icon {
+  width: 1rem;
+}
+
+nav ul {
+  float: right;
+  margin-right: 2rem;
+}
+
+nav ul li {
   display: inline-block;
-  justify-self: start;
+  line-height: 1.6;
+  padding: 3px 8px;
+  margin: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+/* Nav Button */
+
+.nav-button {
+  background: #9dc20b;
+  border-radius: 4px;
+  padding: 3px 8px;
+  display: none;
+}
+
+.nav-button a {
+  color: #fff;
+}
+
+.mobile {
+  height: 48px;
+  display: none;
+}
+
+/* Header Media Queries */
+
+/* Tablet sizes */
+@media only screen and (max-width: 768px) {
+  .nav-button {
+    display: inline-block;
+  }
+}
+
+/* Cell sizes */
+@media only screen and (max-width: 663px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    position: fixed;
+    background: #fff;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  nav ul {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+}
+
+/* Main */
+
+/* Sign-up Section */
+
+.signup-section {
+  height: 43.5rem;
+  background-image: url(../images/banner-landingpage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.banner {
+  background: #9dc20b;
+  color: #fff;
+  align-self: center;
+  margin-left: 100px;
+  text-align: center;
+  line-height: 1.4;
+  border-radius: 4px;
+  border: 1px solid #979797;
+}
+
+.banner h2 {
+  color: #fff;
+  font-family: "Damion", serif;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-style: normal;
+}
+
+.banner h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.email {
+  margin: 12px 80px 56px;
+  font-size: 1.25rem;
+  width: 408px;
+}
+
+.email p,
+.email strong {
+  color: #fff;
+}
+
+.signup-button {
+  color: #fff;
+  background: #4a4a4a;
+  border-radius: 4px;
+  height: 4rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin: 26px auto 0;
+}
+
+@media only screen and (max-width: 770px) {
+  .signup-section {
+    height: 28rem;
+  }
+
+  .banner {
+    background: transparent;
+    border: transparent;
+    justify-self: center;
+    margin: 0 auto;
+  }
+
+  .email {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .signup-section {
+    height: 18rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner h2 {
+    font-size: 1.75rem;
+  }
+  .banner h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Features Section*/
+
+.features-section {
+  padding: 64px;
+  background: #eee;
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  background: #fff;
+  width: 40%;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.card1 {
+  margin-right: 32px;
+}
+.card2 {
   margin-left: 32px;
 }
 
+.card img {
+  width: 100%;
+  padding: 32px;
+}
+
+.card-content {
+  height: 10rem;
+  text-align: center;
+  line-height: 1.2;
+  padding: 32px;
+  padding-top: 8px;
+}
+
+.card-content h1 {
+  font-size: 28px;
+}
+
+.card-content p {
+  font-weight: 200;
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .features-section {
+    padding: 32px;
+  }
+
+  .card img {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .card-content {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .features-section {
+    padding: 16px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .features-section {
+    padding: 0;
+    flex-flow: column wrap;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card1,
+  .card2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-content {
+    text-align: center;
+    height: auto;
+  }
+
+  .card-content h1 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .card-content p {
+    line-height: 1.4;
+    padding-bottom: 0;
+  }
+}
+
+/* Filter Section */
+
+.filter-section {
+  background: #4a4a4a;
+  color: #fff;
+}
+
+.filter-section h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 4rem;
+  line-height: 1.4;
+}
+
+.filter-section p {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.4;
+  font-style: light;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  padding: 5rem 1% 4rem;
+}
+
+.images img {
+  width: 25%;
+}
+
+@media only screen and (max-width: 770px) {
+  .images {
+    padding-bottom: 0;
+    padding-top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .filter-section h1 {
+    font-size: 1.5rem;
+    font-style: none;
+    padding-top: 2rem;
+  }
+
+  .filter-section p {
+    padding: 0.5rem 3rem;
+    padding-bottom: 0px;
+  }
+
+  .images img {
+    width: 33%;
+  }
+
+  .img-4 {
+    display: none;
+  }
+}
+
+/* Quotes Section */
+
+.quotes-section {
+  background: #f3f3f3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.quote p {
+  font-size: 30px;
+  font-family: "Palatino", serif;
+  font-style: italic;
+  padding: 8rem 30px;
+  text-align: end;
+}
+
+.quote-logo img {
+  padding: 8rem 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .quote p {
+    font-size: 27px;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .quotes-section {
+    display: grid;
+    grid-template-rows: 145px 80px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .quote p {
+    font-size: 24px;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .quote-logo {
+    display: grid;
+    justify-items: center;
+    padding-bottom: 20px;
+  }
+
+  .quote-logo img {
+    display: grid;
+    padding: 0;
+    align-self: center;
+    margin: 0;
+  }
+}
+
+/* Footer */
+
+footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  background: #9b9b9b;
+  height: 62px;
+}
+
+.copyright {
+  justify-self: left;
+  margin-left: 2rem;
+  color: #fff;
+  font-size: 12px;
+}
+
 .location {
-  margin-right: 32px;
-  justify-self: end;
+  justify-self: right;
+  margin-right: 2rem;
+  color: #fff;
+  font-size: 12px;
 }
 
-/* html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-} */
-/* HTML5 display-role reset for older browsers */
-/* article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+@media only screen and (max-width: 425px) {
+  .copyright {
+    font-size: 10px;
+    margin-left: 1rem;
+  }
+  .location {
+    font-size: 10px;
+    margin-right: 1rem;
+  }
 }
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-} */
